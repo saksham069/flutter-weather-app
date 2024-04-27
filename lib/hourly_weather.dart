@@ -9,19 +9,24 @@ class HourlyWeather extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150,
       width: 110,
       child: Card(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(
-              time ?? "",
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            Column(children: [
+              Text(
+                time ?? "",
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
+              const SizedBox(
+                width: 80,
+                child: Divider(),
+              ),
+            ]),
             const Icon(
               size: 30,
               Icons.cloud,
