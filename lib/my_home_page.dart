@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:weather_app/current_weather.dart';
@@ -69,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: isLoading
           ? const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator.adaptive(),
             )
           : Padding(
               padding: const EdgeInsets.all(10),
